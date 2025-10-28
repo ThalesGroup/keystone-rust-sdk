@@ -254,9 +254,8 @@ impl Builder {
             } else {
                 shrd_base
             };
-
         Ok(Output{shrd_base: shrd_base,
                   shrd_size: self.shrd_size,
-                  hash:      Vec::from(hash.as_slice())})
+                  hash:      hash.to_vec()})
     }
 }
