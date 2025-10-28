@@ -60,7 +60,6 @@ extern "C" fn _start() -> ! {
 }
 
 /* Panic handler: aborts the enclave */
-#[no_mangle]
 #[panic_handler]
 fn on_panic(_info: &PanicInfo) -> ! {
    eapp_abort(Error::Panic);
